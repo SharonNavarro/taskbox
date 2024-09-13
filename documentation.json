@@ -965,7 +965,7 @@
         },
         {
             "name": "PureInboxScreenComponent",
-            "id": "component-PureInboxScreenComponent-83709e49f1db882460f32d1e38375901fddda36bcb65c9341fa024fe212f3d05ebd8f7e6e89a1e06c3727a2a47c355bdad1c41e478b0db73838933cb3d448bff",
+            "id": "component-PureInboxScreenComponent-4e7e51d7f625a11e1cb262622fd4161b7c1291b76a76c0b87d4bb2dd15e3f293d022804094509453071f28f2192923ddb983940faecc8c4e294cb5e65f0ebb8a",
             "file": "src/app/components/pure-inbox-screen/pure-inbox-screen.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -975,7 +975,7 @@
             "selector": "app-pure-inbox-screen",
             "styleUrls": [],
             "styles": [],
-            "template": "<div *ngIf=\"error\" class=\"page lists-show\">\n  <div class=\"wrapper-message\">\n    <span class=\"icon-face-sad\"></span>\n    <p class=\"title-message\">Oh no!</p>\n    <p class=\"subtitle-message\">Something went wrong</p>\n  </div>\n</div>\n\n<div *ngIf=\"!error\" class=\"page lists-show\">\n  <nav>\n    <h1 class=\"title-page\">Taskbox</h1>\n  </nav>\n  <app-task-list></app-task-list>\n</div>\n",
+            "template": "<p>test</p>\n  <div *ngIf=\"error\" class=\"page lists-show\">\n    <div class=\"wrapper-message\">\n      <span class=\"icon-face-sad\"></span>\n      <p class=\"title-message\">Oh no!</p>\n      <p class=\"subtitle-message\">Something went wrong</p>\n    </div>\n  </div>\n\n  <div *ngIf=\"!error\" class=\"page lists-show\">\n    <nav>\n      <h1 class=\"title-page\">Taskbox</h1>\n    </nav>\n    <app-task-list></app-task-list>\n  </div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -984,7 +984,7 @@
                     "name": "error",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 24,
+                    "line": 25,
                     "type": "any",
                     "decorators": []
                 }
@@ -1001,7 +1001,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-pure-inbox-screen',\r\n  template: `\r\n    <div *ngIf=\"error\" class=\"page lists-show\">\r\n      <div class=\"wrapper-message\">\r\n        <span class=\"icon-face-sad\"></span>\r\n        <p class=\"title-message\">Oh no!</p>\r\n        <p class=\"subtitle-message\">Something went wrong</p>\r\n      </div>\r\n    </div>\r\n\r\n    <div *ngIf=\"!error\" class=\"page lists-show\">\r\n      <nav>\r\n        <h1 class=\"title-page\">Taskbox</h1>\r\n      </nav>\r\n      <app-task-list></app-task-list>\r\n    </div>\r\n  `,\r\n})\r\nexport default class PureInboxScreenComponent {\r\n  @Input() error: any;\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-pure-inbox-screen',\r\n  template: `\r\n  <p>test</p>\r\n    <div *ngIf=\"error\" class=\"page lists-show\">\r\n      <div class=\"wrapper-message\">\r\n        <span class=\"icon-face-sad\"></span>\r\n        <p class=\"title-message\">Oh no!</p>\r\n        <p class=\"subtitle-message\">Something went wrong</p>\r\n      </div>\r\n    </div>\r\n\r\n    <div *ngIf=\"!error\" class=\"page lists-show\">\r\n      <nav>\r\n        <h1 class=\"title-page\">Taskbox</h1>\r\n      </nav>\r\n      <app-task-list></app-task-list>\r\n    </div>\r\n  `,\r\n})\r\nexport default class PureInboxScreenComponent {\r\n  @Input() error: any;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -1308,13 +1308,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-cf12f273a9034e277c647071aace05fe4f684332e5e253c41500765dd07f1cf6258631b0bc64297be2bd48d916b20b463c75f42d394d4653480004bd126f8f3b",
+            "id": "module-AppModule-bf69e8853e1d851d7e1312c174388ff10a71313d84ad276065c9f5644e11bce646da034feba6d024bba73be3ad8c57ff269224debba14d7a4785451ce4beae1f",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { NgModule } from '@angular/core';\r\nimport { TaskModule } from './components/task.module';\r\nimport { NgxsModule } from '@ngxs/store';\r\nimport { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';\r\nimport { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';\r\n\r\nimport { environment } from '../environments/environment';\r\nimport { AppComponent } from './app.component';\r\n\r\n import InboxScreenComponent from './components/inbox-screen/inbox-screen.component';\r\n import PureInboxScreenComponent from './components/pure-inbox-screen/pure-inbox-screen.component';\r\n\r\n@NgModule({\r\n declarations: [AppComponent, InboxScreenComponent, PureInboxScreenComponent],\r\n  imports: [\r\n    BrowserModule,\r\n    TaskModule,\r\n    NgxsModule.forRoot([], { developmentMode: !environment.production, }),\r\n    NgxsReduxDevtoolsPluginModule.forRoot(),\r\n    NgxsLoggerPluginModule.forRoot({ disabled: environment.production, }),\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "import { BrowserModule } from '@angular/platform-browser';\r\nimport { NgModule } from '@angular/core';\r\n\r\n import { TaskModule } from './components/task.module';\r\n import { NgxsModule } from '@ngxs/store';\r\n import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';\r\n import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';\r\n\r\n import { environment } from '../environments/environment';\r\nimport { AppComponent } from './app.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [\r\n    BrowserModule,\r\n   TaskModule,\r\n    NgxsModule.forRoot([], {\r\n     developmentMode: !environment.production,\r\n   }),\r\n   NgxsReduxDevtoolsPluginModule.forRoot(),\r\n   NgxsLoggerPluginModule.forRoot({\r\n     disabled: environment.production,\r\n   }),\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1325,12 +1325,6 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "InboxScreenComponent"
-                        },
-                        {
-                            "name": "PureInboxScreenComponent"
                         }
                     ]
                 },
@@ -1633,7 +1627,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PureInboxScreenComponent>",
-                "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CommonModule, TaskModule],\r\n    }),\r\n  ],\r\n}"
+                "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [PureInboxScreenComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n    applicationConfig({\r\n      providers: [Store, importProvidersFrom(NgxsModule.forRoot([TasksState]))],\r\n    }),\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
@@ -1704,6 +1698,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "WithInteractions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/pure-inbox-screen/pure-inbox-screen.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n   play: async ({ canvasElement }) => {\r\n     const canvas = within(canvasElement);\r\n     // Simulates pinning the first task\r\n     await fireEvent.click(canvas.getByLabelText('pinTask-1'));\r\n     // Simulates pinning the third task\r\n     await fireEvent.click(canvas.getByLabelText('pinTask-3'));\r\n   },\r\n }"
             },
             {
                 "name": "WithPinnedTasks",
@@ -1890,7 +1894,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PureInboxScreenComponent>",
-                    "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CommonModule, TaskModule],\r\n    }),\r\n  ],\r\n}"
+                    "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [PureInboxScreenComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n    applicationConfig({\r\n      providers: [Store, importProvidersFrom(NgxsModule.forRoot([TasksState]))],\r\n    }),\r\n  ],\r\n}"
+                },
+                {
+                    "name": "WithInteractions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/pure-inbox-screen/pure-inbox-screen.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n   play: async ({ canvasElement }) => {\r\n     const canvas = within(canvasElement);\r\n     // Simulates pinning the first task\r\n     await fireEvent.click(canvas.getByLabelText('pinTask-1'));\r\n     // Simulates pinning the third task\r\n     await fireEvent.click(canvas.getByLabelText('pinTask-3'));\r\n   },\r\n }"
                 }
             ],
             "src/app/components/pure-task-list/pure-task-list.stories.ts": [
@@ -2249,6 +2263,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/pure-inbox-screen/pure-inbox-screen.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithInteractions",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
