@@ -1356,13 +1356,13 @@
         },
         {
             "name": "TaskModule",
-            "id": "module-TaskModule-d78243dd058f366e3780dfc3cc7b01d8093b31ce405ff2e73c1c981feb4d97494fec4227e8ea0e8d03539de91c379dc7d465748b3c0fb50df8bf5b54a4bbaffd",
+            "id": "module-TaskModule-36ae2f26b27e45aa9ca047d15c1511f916c622dbcd08b2fb76604f0d8c5ed07fc53b243b023607536be68bc8fe8cbeb459b51b5e55a661564da3c68b72a227e5",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/components/task.module.ts",
             "methods": [],
-            "sourceCode": "\r\nimport { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgxsModule } from '@ngxs/store';\r\n\r\nimport TaskComponent from './task/task.component';\r\nimport TaskListComponent from './task-list/task-list.component';\r\nimport { TasksState } from '../state/task.state';\r\nimport PureTaskListComponent from './pure-task-list/pure-task-list.component';\r\nimport InboxScreenComponent from './inbox-screen/inbox-screen.component';\r\nimport PureInboxScreenComponent from './pure-inbox-screen/pure-inbox-screen.component';\r\n@NgModule({\r\n  imports: [CommonModule, NgxsModule.forFeature([TasksState])],\r\n  exports: [TaskComponent, TaskListComponent, InboxScreenComponent],\r\n  declarations: [TaskComponent, TaskListComponent, PureTaskListComponent, InboxScreenComponent, PureInboxScreenComponent],\r\n  providers: [],\r\n})\r\nexport class TaskModule {}\r\n",
+            "sourceCode": "\r\nimport { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgxsModule } from '@ngxs/store';\r\n\r\nimport TaskComponent from './task/task.component';\r\nimport TaskListComponent from './task-list/task-list.component';\r\nimport { TasksState } from '../state/task.state';\r\nimport PureTaskListComponent from './pure-task-list/pure-task-list.component';\r\nimport InboxScreenComponent from './inbox-screen/inbox-screen.component';\r\nimport PureInboxScreenComponent from './pure-inbox-screen/pure-inbox-screen.component';\r\n@NgModule({\r\n  imports: [CommonModule, NgxsModule.forFeature([TasksState])],\r\n  exports: [TaskComponent, TaskListComponent, InboxScreenComponent,PureInboxScreenComponent, PureTaskListComponent],\r\n  declarations: [TaskComponent, TaskListComponent, PureTaskListComponent, InboxScreenComponent, PureInboxScreenComponent],\r\n  providers: [],\r\n})\r\nexport class TaskModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1397,6 +1397,12 @@
                     "elements": [
                         {
                             "name": "InboxScreenComponent"
+                        },
+                        {
+                            "name": "PureInboxScreenComponent"
+                        },
+                        {
+                            "name": "PureTaskListComponent"
                         },
                         {
                             "name": "TaskComponent"
@@ -1627,7 +1633,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PureInboxScreenComponent>",
-                "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [PureInboxScreenComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n    applicationConfig({\r\n      providers: [Store, importProvidersFrom(NgxsModule.forRoot([TasksState]))],\r\n    }),\r\n  ],\r\n}"
+                "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, TaskModule],\r\n    }),\r\n    applicationConfig({\r\n      providers: [Store, importProvidersFrom(NgxsModule.forRoot([TasksState]))],\r\n    }),\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
@@ -1894,7 +1900,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PureInboxScreenComponent>",
-                    "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [PureInboxScreenComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n    applicationConfig({\r\n      providers: [Store, importProvidersFrom(NgxsModule.forRoot([TasksState]))],\r\n    }),\r\n  ],\r\n}"
+                    "defaultValue": "{\r\n  component: PureInboxScreenComponent,\r\n  title: 'PureInboxScreen',\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, TaskModule],\r\n    }),\r\n    applicationConfig({\r\n      providers: [Store, importProvidersFrom(NgxsModule.forRoot([TasksState]))],\r\n    }),\r\n  ],\r\n}"
                 },
                 {
                     "name": "WithInteractions",
