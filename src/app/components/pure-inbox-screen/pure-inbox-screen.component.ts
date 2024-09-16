@@ -4,7 +4,6 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-pure-inbox-screen',
   template: `
-  <p>test</p>
     <div *ngIf="error" class="page lists-show">
       <div class="wrapper-message">
         <span class="icon-face-sad"></span>

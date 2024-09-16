@@ -965,7 +965,7 @@
         },
         {
             "name": "PureInboxScreenComponent",
-            "id": "component-PureInboxScreenComponent-4e7e51d7f625a11e1cb262622fd4161b7c1291b76a76c0b87d4bb2dd15e3f293d022804094509453071f28f2192923ddb983940faecc8c4e294cb5e65f0ebb8a",
+            "id": "component-PureInboxScreenComponent-83709e49f1db882460f32d1e38375901fddda36bcb65c9341fa024fe212f3d05ebd8f7e6e89a1e06c3727a2a47c355bdad1c41e478b0db73838933cb3d448bff",
             "file": "src/app/components/pure-inbox-screen/pure-inbox-screen.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -975,7 +975,7 @@
             "selector": "app-pure-inbox-screen",
             "styleUrls": [],
             "styles": [],
-            "template": "<p>test</p>\n  <div *ngIf=\"error\" class=\"page lists-show\">\n    <div class=\"wrapper-message\">\n      <span class=\"icon-face-sad\"></span>\n      <p class=\"title-message\">Oh no!</p>\n      <p class=\"subtitle-message\">Something went wrong</p>\n    </div>\n  </div>\n\n  <div *ngIf=\"!error\" class=\"page lists-show\">\n    <nav>\n      <h1 class=\"title-page\">Taskbox</h1>\n    </nav>\n    <app-task-list></app-task-list>\n  </div>\n",
+            "template": "<div *ngIf=\"error\" class=\"page lists-show\">\n  <div class=\"wrapper-message\">\n    <span class=\"icon-face-sad\"></span>\n    <p class=\"title-message\">Oh no!</p>\n    <p class=\"subtitle-message\">Something went wrong</p>\n  </div>\n</div>\n\n<div *ngIf=\"!error\" class=\"page lists-show\">\n  <nav>\n    <h1 class=\"title-page\">Taskbox</h1>\n  </nav>\n  <app-task-list></app-task-list>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -984,7 +984,7 @@
                     "name": "error",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 24,
                     "type": "any",
                     "decorators": []
                 }
@@ -1001,7 +1001,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-pure-inbox-screen',\r\n  template: `\r\n  <p>test</p>\r\n    <div *ngIf=\"error\" class=\"page lists-show\">\r\n      <div class=\"wrapper-message\">\r\n        <span class=\"icon-face-sad\"></span>\r\n        <p class=\"title-message\">Oh no!</p>\r\n        <p class=\"subtitle-message\">Something went wrong</p>\r\n      </div>\r\n    </div>\r\n\r\n    <div *ngIf=\"!error\" class=\"page lists-show\">\r\n      <nav>\r\n        <h1 class=\"title-page\">Taskbox</h1>\r\n      </nav>\r\n      <app-task-list></app-task-list>\r\n    </div>\r\n  `,\r\n})\r\nexport default class PureInboxScreenComponent {\r\n  @Input() error: any;\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-pure-inbox-screen',\r\n  template: `\r\n    <div *ngIf=\"error\" class=\"page lists-show\">\r\n      <div class=\"wrapper-message\">\r\n        <span class=\"icon-face-sad\"></span>\r\n        <p class=\"title-message\">Oh no!</p>\r\n        <p class=\"subtitle-message\">Something went wrong</p>\r\n      </div>\r\n    </div>\r\n\r\n    <div *ngIf=\"!error\" class=\"page lists-show\">\r\n      <nav>\r\n        <h1 class=\"title-page\">Taskbox</h1>\r\n      </nav>\r\n      <app-task-list></app-task-list>\r\n    </div>\r\n  `,\r\n})\r\nexport default class PureInboxScreenComponent {\r\n  @Input() error: any;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
